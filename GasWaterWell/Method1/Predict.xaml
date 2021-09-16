@@ -1,0 +1,46 @@
+﻿<Window x:Class="GasWaterWell.Predict"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GasWaterWell"
+        mc:Ignorable="d"
+        Title="Predict" Height="477" Width="598.917"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="输入" HorizontalAlignment="Left" Height="103" Margin="10,10,0,0" VerticalAlignment="Top" Width="571">
+            <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="639*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Pi:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="Pi_TextBox" HorizontalAlignment="Left" Height="23" Margin="40,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                <Label Content="a:" HorizontalAlignment="Left" Margin="344,10,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="a_TextBox" HorizontalAlignment="Left" Height="23" Margin="374,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+                <Label Content="Qg:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="Qg_TextBox" HorizontalAlignment="Left" Height="23" Margin="40,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
+                <Label Content="b:" HorizontalAlignment="Left" Margin="344,44,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="b_TextBox" HorizontalAlignment="Left" Height="23" Margin="374,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
+            </Grid>
+        </GroupBox>
+        <Button Name="Cal_Button" Content="计算" HorizontalAlignment="Left" Margin="485,118,0,0" VerticalAlignment="Top" Width="75"  Click="Cal_Click" />
+        <GroupBox Header="计算结果" HorizontalAlignment="Left" Height="253" Margin="10,142,0,0" VerticalAlignment="Top" Width="574">
+            <DataGrid Name="OutputDataGrid" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        </GroupBox>
+        <Button Name="Output_Button" Content="导出" HorizontalAlignment="Left" Margin="36,400,0,0" VerticalAlignment="Top" Width="75" Click="Output_Click" IsEnabled="False" />
+        <ComboBox Name="Output_ComboBox" HorizontalAlignment="Left" Margin="125,400,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem IsSelected="True" Content="导出Excel"/>
+            <ComboBoxItem Content="导出Csv"/>
+        </ComboBox>
+        <Button Name="Save_Button" Content="保存" HorizontalAlignment="Left" Margin="405,402,0,0" VerticalAlignment="Top" Width="75" Click="Save_Click" IsEnabled="False" RenderTransformOrigin="0.813,0.526" />
+        <Button Content="取消" HorizontalAlignment="Left" Margin="485,402,0,0" VerticalAlignment="Top" Width="75" Click="Cancel_Click"/>
+
+
+    </Grid>
+</Window>

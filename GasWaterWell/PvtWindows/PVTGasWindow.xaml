@@ -1,0 +1,82 @@
+﻿<Window x:Class="GasWaterWell.PVTGas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GasWaterWell"
+        mc:Ignorable="d"
+        Title="天然气性质PVT计算" Height="606" Width="800"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,10,0,0" Height="551" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="输入" HorizontalAlignment="Left" Height="290" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <Grid HorizontalAlignment="Left" Height="270" Margin="10,0,0,-2" VerticalAlignment="Top" Width="743">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="736*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="名称:" HorizontalAlignment="Left" Margin="9,9,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="GasName" HorizontalAlignment="Left" Height="23" Margin="61,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" Grid.Column="1"/>
+                <Label Content="CO2:" HorizontalAlignment="Left" Margin="3,43,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="YCO2" HorizontalAlignment="Left" Height="23" Margin="61,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" Grid.Column="1"/>
+                <Label Content="气藏温度:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,73,0,0" Grid.Column="1"/>
+                <TextBox Name="T" HorizontalAlignment="Left" Height="23" Margin="69,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Grid.Column="1"/>
+                <Label Content="天然气相对密度:" HorizontalAlignment="Left" Margin="380,8,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="yg" HorizontalAlignment="Left" Height="23" Margin="484,9,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <Label Content="气藏水矿化度:" HorizontalAlignment="Left" Margin="380,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="NaCl" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="484,45,0,0" Grid.Column="1"/>
+                <Label Content="----------------------------------------------------------------------------------------------------------------------------------------" HorizontalAlignment="Left" Margin="0,131,0,0" VerticalAlignment="Top" Width="717" Grid.Column="1"/>
+                <TextBox Name="GasMax" HorizontalAlignment="Left" Height="23" Margin="61,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <Label Content="气藏压力:" HorizontalAlignment="Left" Margin="9,156,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label Content="MAX:" HorizontalAlignment="Left" Margin="18,184,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label Content="MIN:" HorizontalAlignment="Left" Margin="276,184,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="GasMin" HorizontalAlignment="Left" Height="23" Margin="319,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <Label Content="步长:" HorizontalAlignment="Left" Margin="528,184,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="GasSize" HorizontalAlignment="Left" Height="23" Margin="570,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                <Label Content="MPa" Grid.Column="1" HorizontalAlignment="Left" Margin="181,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="天然气气类型:" Grid.Column="1" HorizontalAlignment="Left" Margin="501,155,0,0" VerticalAlignment="Top"/>
+                <RadioButton Name="GasGan" Content="干气" Grid.Column="1" HorizontalAlignment="Left" Margin="590,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.44,-0.286" IsChecked="True"/>
+                <RadioButton Name="GasNing" Content="凝析气" Grid.Column="1" HorizontalAlignment="Left" Margin="654,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.11,0"/>
+                <Label Content="mol%" Grid.Column="1" HorizontalAlignment="Left" Margin="228,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="℃" Grid.Column="1" HorizontalAlignment="Left" Margin="228,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="Dless" Grid.Column="1" HorizontalAlignment="Left" Margin="604,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="10^4 ppm" Grid.Column="1" HorizontalAlignment="Left" Margin="604,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="MPa" Grid.Column="1" HorizontalAlignment="Left" Margin="439,186,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,0.44"/>
+                <Label Content="H2S:" HorizontalAlignment="Left" Margin="381,75,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Name="YH2S" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="484,75,0,0" Grid.Column="1"/>
+                <Label Content="mol%" Grid.Column="1" HorizontalAlignment="Left" Margin="604,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+                <Label Content="N2:" HorizontalAlignment="Left" Margin="5,108,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox x:Name="N2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" Margin="61,108,0,0" Grid.Column="1"/>
+                <Label Content="mol%" Grid.Column="1" HorizontalAlignment="Left" Margin="228,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+            </Grid>
+
+        </GroupBox>
+
+        <Button Name="calc_btn" Content="计算" HorizontalAlignment="Left" Margin="686,262,0,0" VerticalAlignment="Top" Width="75" Height="26" Background="gray" Click="Button_Click_calc" Foreground="White"/>
+        <Button Content="导出" Name="export_btn" HorizontalAlignment="Left" Margin="10,510,0,0" VerticalAlignment="Top" Width="68" Height="26" Click="Button_Click_export" IsEnabled="False" />
+        <ComboBox x:Name="mycombox" HorizontalAlignment="Left" Margin="94,515,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem IsSelected="True">导出到Excel</ComboBoxItem>
+            <ComboBoxItem>导出到CSV</ComboBoxItem>
+        </ComboBox>
+        <Button Content="保存" Name="save_btn" HorizontalAlignment="Left" Margin="601,515,0,0" VerticalAlignment="Top" Width="68" Height="26" Background="gray" Foreground="White" IsEnabled="False" Click="Button_Click_save"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="693,515,0,0" VerticalAlignment="Top" Width="68" Height="26" Click="Button_Click_cancel"/>
+        <Button Content="导入" HorizontalAlignment="Left" Margin="601,262,0,0" VerticalAlignment="Top" Width="68" Height="26" Click="Button_Click_import"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="200" Margin="10,305,0,0" VerticalAlignment="Top" Width="772">
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="气藏压力p" Width="auto" Binding="{Binding p}"/>
+                <DataGridTextColumn Header="天然气偏差系数z1" Width="auto" Binding="{Binding z1}"/>
+                <DataGridTextColumn Header="天然气偏差系数z2" Width="auto" Binding="{Binding z2}"/>
+                <DataGridTextColumn Header="天然气体积系数Bg(rm^3/sm^3)" Width="auto" Binding="{Binding Bg}"/>
+                <DataGridTextColumn Header="天然气密度pg(kg/m^3)" Width="auto" Binding="{Binding pg}"/>
+                <DataGridTextColumn Header="天然气粘度ug(mPa.s)" Width="auto" Binding="{Binding ug}"/>
+                <DataGridTextColumn Header="天然气压缩系数Cg(1/MPa)" Width="auto" Binding="{Binding Cg}"/>
+                <DataGridTextColumn Header="天然气拟压力Pp(MPa^2/(mPa.s))" Width="auto" Binding="{Binding Pp}"/>
+                <DataGridTextColumn Header="凝析水汽比Rcwg" Width="auto" Binding="{Binding Rcwg}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

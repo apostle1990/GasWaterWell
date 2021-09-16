@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Packages>
+  <Package Name="1" Id="1630810156" Type="Package">
+    <PVT Name="PVT" Type="PVT" Id="1630810156">
+      <PVTItem Type="PVTItem" Class="gas" Name="gas11.gpvt" Id="gas11.gpvt" />
+      <PVTItem Type="PVTItem" Class="water" Name="water11.wpvt" Id="water11.wpvt" />
+      <PVTItem Type="PVTItem" Class="rock" Name="rock11.rpvt" Id="1630810248" />
+    </PVT>
+    <GWPhaseSeepage Type="GWPS" Name="气水相渗">
+      <GWPSItem Type="GWPSItem" Name="123.gwps" Id="1630810299" />
+    </GWPhaseSeepage>
+    <Well Type="Well" Name="12" Id="1630810312">
+      <BasicPara Type="Para" Name="基础参数" WellId="1630810312" />
+      <TestWell Type="TestWell" Name="产能试井" WellId="1630810312">
+        <TWItem Type="TWItem" Name="产能预测2021/9/5 10:52:59.pre" Id="1630810385" FitId="1630810379" PredId="1630810385" />
+      </TestWell>
+      <SPBGas Type="SPBG" Name="单点二项式法-气相">
+        <PressMethod Type="PressMethod" Name="压力平方法" WellId="1630810312">
+          <PressMethodItem Type="PressMethodItem" Name="单点二项式-气相-压力平方法2021/9/5 10:53:17.psm" Id="1630810397" WellId="1630810312" ResultId="1630810402" />
+        </PressMethod>
+        <PseudoPress Type="PPress" Name="拟压力法" WellId="1630810312" />
+      </SPBGas>
+      <SPBGasWater Type="SPBGW" Name="单点二项式法-气水两相" WellId="1630810312" />
+    </Well>
+  </Package>
+</Packages>

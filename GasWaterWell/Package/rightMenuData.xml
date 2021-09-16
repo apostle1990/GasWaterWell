@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Packages>
+  <Package Name="XXX项目资源" Type="Package" Id="1">
+    <PVT Name="PVT" Type="PVT">
+      <PVTItem Type="PVTItem" Class="gas" Name="gasText.gpvt" Id="gasText.gpvt" />
+      <PVTItem Type="PVTItem" Class="water" Name="waterText.wpvt" Id="waterText.wpvt" />
+      <PVTItem Type="PVTItem" Class="rock" Name="rockTest.rpvt" Id="rockTest.rpvt" />
+      <PVTItem Type="PVTItem" Class="gas" Name="gastest2.gpvt" Id="gastest2.gpvt" />
+    </PVT>
+    <Well Name="xxx试井" Type="Well" Id="234">
+      <PressMethod Name="压力平方法" Type="PressMethod">
+        <PressMethodItem Name="压力平方法1.prm" Type="PressMethodItem" WellId="234" Id="4" Class="press" />
+        <PressMethodItem Type="PressMethodItem" Class="press" Name="方法2019/5/11 20:44:54.prm" Id="1557578694" WellId="234" />
+        <PressMethodItem Type="PressMethodItem" Class="press" Name="方法2019/5/11 20:47:47.prm" Id="1557578867" WellId="234" />
+      </PressMethod>
+      <GasWaterTowMethod Name="气水两相方法" Type="GasWaterTowMethod">
+        <GasWaterMethodItem Name="气水两相方法1.gwm" Type="GasWaterMethodItem" WellId="234" Id="8" Class="gasWater" />
+      </GasWaterTowMethod>
+    </Well>
+    <Well Type="Well" Name="test2" Id="1557553353" />
+    <Well Type="Well" Name="wellTest2" Id="1557567680">
+      <PressMethod Type="PressMethod" Name="压力平方法" WellId="1557567680" />
+      <GasWaterTowMethod Type="GasWaterTowMethod" Name="气水两相方法" WellId="1557567680" />
+    </Well>
+  </Package>
+</Packages>

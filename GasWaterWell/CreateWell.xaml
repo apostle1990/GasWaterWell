@@ -1,0 +1,47 @@
+﻿<Window x:Class="GasWaterWell.CreateWell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GasWaterWell"
+        mc:Ignorable="d"
+        Title="创建试产井" Height="438" Width="529" 
+        WindowStartupLocation="CenterScreen" 
+        Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="基本属性" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="490">
+            <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" >
+                <Label Content="名称：" HorizontalAlignment="Left" Margin="1,12,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="Name_TextBox" HorizontalAlignment="Left" Height="23" Margin="52,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411"/>
+                <Label Content="代码：" HorizontalAlignment="Left" Margin="1,40,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Code_TextBox" HorizontalAlignment="Left" Height="23" Margin="52,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411"/>
+                <Label Content="所在地：" HorizontalAlignment="Left" Margin="1,68,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="Place_TextBox" HorizontalAlignment="Left" Height="23" Margin="52,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411"/>
+                <Label Content="概况：" HorizontalAlignment="Left" Margin="1,96,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="About_TextBox" HorizontalAlignment="Left" Height="65" Margin="52,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="411"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="参数及方法" HorizontalAlignment="Left" Height="152" Margin="10,208,0,0" VerticalAlignment="Top" Width="490">
+            <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="639*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox Name="Pvt_Gas_ComoBox" HorizontalAlignment="Left" Margin="84,10,0,0" VerticalAlignment="Top" Width="203" Height="25"/>
+                <Label Content="PVT-Gas：" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="Pvt_Water_ComoBox" HorizontalAlignment="Left" Margin="84,40,0,0" VerticalAlignment="Top" Width="203" Height="25"/>
+                <Label Content="PVT-Water：" HorizontalAlignment="Left" Margin="0,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.571,0"/>
+                <ComboBox x:Name="Pvt_Rock_ComoBox" HorizontalAlignment="Left" Margin="84,70,0,0" VerticalAlignment="Top" Width="203" Height="25"/>
+                <Label Content="PVT-Rock：" HorizontalAlignment="Left" Margin="1,70,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="Krwg_ComoBox" HorizontalAlignment="Left" Margin="84,100,0,0" VerticalAlignment="Top" Width="203" Height="25"/>
+                <Label Content="气水相渗：" HorizontalAlignment="Left" Margin="1,100,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="保存" HorizontalAlignment="Left" Margin="335,368,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="Save_Click"/>
+        <Button Content="取消" HorizontalAlignment="Left" Margin="425,368,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="Cancel_Click"/>
+
+    </Grid>
+</Window>
